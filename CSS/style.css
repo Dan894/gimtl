@@ -8,13 +8,13 @@
 * --------------------------------------- */
 header{
   position:fixed;
-  height: 40px;
+  height: 50px;
   display:block;
   width: 100%;
   background: #333;
   z-index:9;
   background-color: #00AFB2;
-  padding: 10px 0;
+  padding: 5px;
   top:0px;
 }
 #menu-items{
@@ -35,15 +35,15 @@ header{
   padding: 0 10px;
   background-color: limegreen;
 }
-/*#dopdown-menu{
+#dopdown-menu{
   position: absolute;
   right: 10%;
   top: 50px;
-  display: none;
+  visibility: hidden;
 }
 .dropdown-menu{
   display: block;
-}*/
+}
 #ersteSimg{
   position: absolute;
   top: 0;
@@ -86,6 +86,15 @@ header{
 	margin:0;
 }
 /*Startseite mit den Elementen*/
+.row{
+  height: 93vh;
+  padding: 5px 5px 5px 5px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: auto;
+}
 h1, h3, h5, p{
   color: #00AFB2;
 }
@@ -118,12 +127,13 @@ h1, h3, h5, p{
 }
 @media only screen and (max-width: 500px) {
   .einzelbilder{
-    height: 30%;
-    width: 30%;
+    height: 40%;
+    width: 40%;
   }
   h1{
     /*font-size: 150%;*/
     margin-bottom: 0;
+    padding-top: 5px;
   }
   h3{
     /*font-size: 100%;*/
@@ -131,8 +141,8 @@ h1, h3, h5, p{
   }
   h5{
     /*font-size: 75%;*/
-    margin-top: 4px;
-    margin-bottom: 2px;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
 }
 
