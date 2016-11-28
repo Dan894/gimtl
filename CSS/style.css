@@ -88,7 +88,7 @@ header{
 /*Startseite mit den Elementen*/
 .row{
   height: 93vh;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 40px 5px 40px;
   margin-top: 50px;
   margin-bottom: 15px;
   margin-left: 0;
@@ -109,23 +109,59 @@ h1, h3, h5, p{
    margin-top: -0%;
 }
 #gruppenbild{
-  margin:10%;
+  margin-top: calc(50px + 5%);
+  margin-left: 10%;
   width:80%;
   height:80%;
 }
-@media only screen and (min-width: 1000px) {
-  #gruppenbild{
-    margin-top:3%;
-    margin-left: 20%;
-    width:60%;
-  }
+#beschreibung-gruppenbild{
+  margin: 5%;
 }
 .einzelbilder{
   height: 20em;
   width: 20em;
-  border: 1px solid black;
+}
+.legende{
+  /*position: absolute;*/
+  /*bottom: 0;*/
+  margin-bottom: 30px;
+  /*width: 100%;*/
+  /*left: 150%;*/
+}
+@media only screen and (min-width: 1000px) {
+  #gruppenbild{
+    width: 80%;
+  }
+  #picture{
+    height: 60%;
+  }
+  .legende{
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 500px) {
+  #gruppenbild{
+    width: 80%;
+  }
+  #picture{
+    height: 60%;
+  }
+  .legende{
+    height: 100px;
+  }
 }
 @media only screen and (max-width: 500px) {
+  .fp-controlArrow.fp-next{
+    border-width: 38.5px 0 38.5px  15px;
+    border-color: transparent rgba(0, 175, 178, 0.5) transparent;
+  }
+  .fp-controlArrow.fp-prev{
+    border-width: 38.5px 15px 38.5px 0;
+    border-color: transparent rgba(0, 175, 178, 0.5) transparent;
+  }
+  #picture{
+    width: 80%;
+  }
   .einzelbilder{
     height: 40%;
     width: 40%;
@@ -143,6 +179,10 @@ h1, h3, h5, p{
     /*font-size: 75%;*/
     margin-top: 10px;
     margin-bottom: 5px;
+  }
+  .legende{
+    width: 90%;
+    /*height: 5%;*/
   }
 }
 
