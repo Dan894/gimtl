@@ -10,12 +10,13 @@
   	<meta name="keywords"  content="FSR3,Fachschaftsrat3,Beuth-Hochschule" />
 
     <link rel="icon" type="image/png" href="DATA/logo_start.jpg"> <!-- Logo für HTML Tab-->
-    <link rel="stylesheet" type="text/css" href="CSS/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/jquery.fullPage.css" /> <!-- https://github.com/alvarotrigo/fullPage.js#fullpagejs -->
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
   	<link rel="stylesheet" type="text/css" href="CSS/style.css" />
   </head>
   <body>
     <header>
+      <!-- http://getbootstrap.com/javascript/ look at header Dropdiown-->
       <!-- <ul id="dropdown-menu">
         <li class="dropdown-menu">
           FSR3 Beuth Webseite
@@ -57,12 +58,14 @@
           <h3>Bauingenieur- und Geoinformationswesen</h3>
     		</div>
     	</div>
-    	<div class="section" id="section1" style="height:100%">
+    	<div class="section" id="section1">
     	  <div class="slide" id="slide0">
           <div id='gruppenbild'>
             <h1>Das sind wir!</h1>
-            <img src="DATA/gruppe.jpg" alt="Gruppenbild von der ESEM1617"  style="width: 100%;">
-        		<p>
+            <p></p>
+            <img src="DATA/gruppe.jpg" alt="Gruppenbild von der ESEM1617" id="picture">
+            <p></p>
+        		<p id="beschreibung-gruppenbild">
         			Hier könnt ihr einen kleinen Einblick über uns und unsere Helfer gewinnen. Wir sind 11 gewählte Mitglieder, 5 Nachrücker und zahlreiche Helfer, die uns bei der täglichen Arbeit im INI und auf Veranstaltungen unterstützen.
         		</p>
           </div>
@@ -75,21 +78,25 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Sonya Hamade (Vorsitz)</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Sonya.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Chanthuru (stellv. Vorsitz)</h5>
               <div class="picture" >
-                <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden">
+                <img class="einzelbilder"src="DATA/portrait/Vorlage_Chanthuru.jpg" alt="kein Bild vorhanden">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Eser (Finanzer)</h5>
               <div class="picture" >
-                <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden">
+                <img class="einzelbilder"src="DATA/portrait/Vorlage_Eser.jpg" alt="kein Bild vorhanden">
               </div>
             </div>
+            <img class="legende" src="DATA/Legende.jpg" alt="Legenden Bild des Fachereiches">
+            <footer style="background-color:red">
+
+            </footer>
           </div>
     		</div>
         <div class="slide" id="slide2">
@@ -100,107 +107,113 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Florian (Logistik)</h5>
               <div class="picture" >
-                <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden">
+                <img class="einzelbilder"src="DATA/portrait/Vorlage_Florian.jpg" alt="kein Bild vorhanden">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Peter (FSRK)</h5>
               <div class="picture" >
-                <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden">
+                <img class="einzelbilder"src="DATA/portrait/Vorlage_Peter.jpg" alt="kein Bild vorhanden">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Daniel (Admin)</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Daniel.jpg" alt="Sonyas Bild">
               </div>
+            </div>
+            <div class="col-xs-12 legende">
+              <img src="DATA/Legende.jpg" alt="Legenden Bild des Fachereiches">
             </div>
           </div>
     		</div>
         <div class="slide" id="slide3">
-    		  <h1>Mitglieder II</h1>
           <div class="row">
+            <h1>Mitglieder II</h1>
             <!-- wenn keine Bild nutze Folgendes -->
             <!-- <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden"> -->
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Haris (stellv. Finanzen)</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Haris.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Caro (Öffentlichkeitsarbeit)</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Caro.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Lucas (Büromittel)</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Lucas.jpg" alt="Sonyas Bild">
               </div>
+            </div>
+            <div class="col-xs-12 legende">
+              <img src="DATA/Legende.jpg" alt="Legenden Bild des Fachereiches">
             </div>
           </div>
     		</div>
         <div class="slide" id="slide4">
-    		  <h1>Mitglieder III</h1>
           <div class="row">
+            <h1>Mitglieder III</h1>
             <!-- wenn keine Bild nutze Folgendes -->
             <!-- <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden"> -->
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Funda</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Funda.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Rella</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Rella.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Stefan</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Stefan.jpg" alt="Sonyas Bild">
               </div>
             </div>
           </div>
     		</div>
         <div class="slide" id="slide5">
-    		  <h1>Mitglieder IV</h1>
           <div class="row">
+            <h1>Mitglieder IV</h1>
             <!-- wenn keine Bild nutze Folgendes -->
             <!-- <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden"> -->
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Renj</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Renj.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
-              <h5>Bünymin</h5>
+              <h5>Bünyamin</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Bünyamin.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Sinan</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Sinan.jpg" alt="Sonyas Bild">
               </div>
             </div>
           </div>
     		</div>
         <div class="slide" id="slide6">
-    		  <h1>Mitglieder V</h1>
           <div class="row">
+            <h1>Mitglieder V</h1>
             <!-- wenn keine Bild nutze Folgendes -->
             <!-- <img class="einzelbilder"src="DATA/kein_Bild.jpg" alt="kein Bild vorhanden"> -->
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Resan</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/kein_Bild.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Resan.jpg" alt="Sonyas Bild">
               </div>
             </div>
             <!-- <div class="col-md-4 col-sm-6 col-xs-12">
@@ -251,8 +264,6 @@
     </div>
 
     <script type="text/javascript" src="JS/jquery.js"></script>
-    <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>-->
-
     <script type="text/javascript" src="JS/jquery.fullPage.js"></script>
   	<script type="text/javascript" src="JS/javascript.js"></script>
   </body>
