@@ -9,20 +9,4 @@ $(document).ready(function() {
     scrollOverflow: false,
     css3: true
   });
-  // var elem = document.getElementsByClas("section");
-  // elem.addEventListener("change", Auswählen);
-  //
-  // function Auswählen() {
-  //   var head = document.getElementById("header");
-  //   console.log(head.innerHTML);
-  //   var x = document.getElementsByClass("section").value;
-  //   alert('Sie haben einen '+x+' ausgewählt!');
-  // }
-  // $('.section').onChange(function(){
-  //
-  // });
-  console.log(document.getElementById('fullpage'));
-  $("#fullpage").change(function(){
-    alert("The text has been changed.");
-  });
 });

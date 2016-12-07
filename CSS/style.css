@@ -35,15 +35,9 @@ header{
   padding: 0 10px;
   background-color: limegreen;
 }
-#dopdown-menu{
-  position: absolute;
-  right: 10%;
-  top: 50px;
-  visibility: hidden;
-}
-.dropdown-menu{
+/*.dropdown-menu{
   display: block;
-}
+}*/
 #ersteSimg{
   position: absolute;
   top: 0;
@@ -72,8 +66,8 @@ header{
 .fp-controlArrow.fp-prev{
   border-color: transparent rgba(0, 175, 178, 0.5) transparent;
 }
-#menu li a,
-#menu li.active a{
+#menu > li a,
+#menu > li.active a{
 	padding: 9px 18px;
 	display:block;
 }
@@ -98,12 +92,12 @@ header{
 h1, h3, h5, p{
   color: #00AFB2;
 }
-.intro p{
+.intro > p{
   /*padding: 0 10%;*/
   font-size: 300%;
   font-weight: bold;
 }
-.intro img{
+.intro > img{
    width:30%;
    height:30%;
    margin-top: -0%;
@@ -137,6 +131,12 @@ h1, h3, h5, p{
   }
   .legende{
     height: 100px;
+  }
+}
+@media only screen and (min-width: 768px){
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 @media only screen and (min-width: 500px) {
