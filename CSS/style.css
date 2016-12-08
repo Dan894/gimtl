@@ -82,12 +82,12 @@ header{
 /*Startseite mit den Elementen*/
 .row{
   height: 93vh;
-  padding: 5px 40px 5px 40px;
+  padding: 5px 40px 0px 40px;
   margin-top: 50px;
-  margin-bottom: 15px;
+  margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
-  overflow: auto;
+  overflow: hidden;
 }
 h1, h3, h5, p{
   color: #00AFB2;
