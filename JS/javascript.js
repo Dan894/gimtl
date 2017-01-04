@@ -9,4 +9,8 @@ $(document).ready(function() {
     scrollOverflow: false,
     css3: true
   });
+  $(function () {
+    $('[data-toggle="popover"]').popover();
+  });
+  
 });

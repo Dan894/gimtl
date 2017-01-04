@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FSR 3</title>
     <meta name="author" content="Daniel Jaffke; Florian Krebs">
     <meta name="description" content="Internetpräsentation des FSR 3" />
@@ -18,46 +18,74 @@
     <header>
       <!-- http://getbootstrap.com/javascript/ Link für Anleitung-->
       <!-- Dropdown mithilfe der Bootstrap JS Datei und dem einladen derselbigen -->
-      <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
+      <!-- <div class="collapse navbar-collapse bs-example-js-navbar-collapse"> -->
         <ul class="nav navbar-nav">
           <li>
-            <img src="DATA/logo_header.png" alt="Logo des FSR3" title="FSR3 Logo" style="width:40px; height:40px;"/>
+            <a href="index.html"  style="padding:0px;">
+              <img id="icon" src="DATA/logo_header.png" alt="Logo des FSR3" title="FSR3 Logo"/>
+              <label for="icons" class="links">
+                Startseite
+              </label>
+            </a>
           </li>
-         </ul>
-         <ul class="nav navbar-nav navbar-right">
-           <li>
-             <a href="#">Facebook</a>
-           </li>
-           <li>
-             <a title="Lern- und Informationssystem des FSR 3" href="Unterseiten/klausur.html">LuIS</a>
-           </li>
-           <li id="fat-menu" class="dropdown">
-             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-               Dropdown
-               <span class="caret"></span>
-             </a>
-             <ul class="dropdown-menu">
-               <li>
-                 <!-- Link wird in neuem Tab geöffnet über die Funktion target="_blank" -->
-                 <a title="Link zur externen Beuth Fachbereichsseite" href="http://www.beuth-hochschule.de/iii/" target="_blank">FB3 Beuth</a>
-               </li>
-               <li>
-                 <a title="Link zur externen ASTA Seite" href="http://asta.studis-bht.de/" target="_blank">ASTA Seite</a>
-               </li>
-               <li>
-                 <a href="#">Kontakt</a>
-               </li>
-               <li role="separator" class="divider">
-               </li>
-               <li>
-                 <a href="Unterseiten/Impressum.html" target="_blank">Impressum</a>
-               </li>
-             </ul>
-           </li>
-         </ul>
-       </div>
-      <div>
-      </div>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="" href="Unterseiten/map.html" target="_blank">
+              <!-- https://openclipart.org/detail/177208/map-location -->
+              <img class="icons" src="DATA/Marker/location.png">
+              <label for="icons" class="links">Raum</label>
+            </a>
+          </li>
+          <!-- <li>
+            <a class="popover" role="tooltip">Hallo Welt<div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content" id="map">Das ist der caption</div></a>
+          </li> -->
+          <li>
+            <a href="https://www.facebook.com/FSRIII/" target="_blank">
+              <img class="icons" src="DATA/Marker/facebook.png">
+              <!-- https://openclipart.org/detail/269513/piercing-the-heavens -->
+              <label for="icons" class="links">
+                Facebook
+              </label>
+            </a>
+          </li>
+          <li>
+            <a title="Lern- und Informationssystem des FSR 3" href="Unterseiten/klausur.html" target="_blank">
+              <img class="icons" src="DATA/Marker/order.png">
+              <!-- https://openclipart.org/detail/35329/tango-system-file-manager -->
+              <label for="icons" class="links">
+                LuIS
+              </label>
+              </a>
+          </li>
+          <li id="fat-menu" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <img class="icons" src="DATA/Marker/menu.png">
+              <label for="icons" class="links">
+                Dropdown
+                <span class="caret"></span>
+              </label>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li>
+                <!-- Link wird in neuem Tab geöffnet über die Funktion target="_blank" -->
+                <a title="Link zur externen Beuth Fachbereichsseite" href="http://www.beuth-hochschule.de/iii/" target="_blank">FB3 Beuth</a>
+              </li>
+              <li>
+                <a title="Link zur externen ASTA Seite" href="http://asta.studis-bht.de/" target="_blank">ASTA Seite</a>
+              </li>
+              <li>
+                <a href="#">Kontakt</a>
+              </li>
+              <li role="separator" class="divider">
+              </li>
+              <li>
+                <a href="Unterseiten/Impressum.html" target="_blank">Impressum</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      <!-- </div> -->
     </header>
     <ul id="menu">
       <li data-menuanchor="firstPage" class="active"><a href="#firstPage"></a></li>
@@ -247,7 +275,16 @@
           </div>
     		</div>
       </div>
-    	<div class="section" id="section2">
+      <div class="section" id="section2">
+    		<div>
+    			<h1>Sprechzeiten</h1>
+          <h2>tESTE bLUA</h2>
+          <p>
+            Besuchen sie und bald wieder!
+          </p>
+    		</div>
+    	</div>
+    	<div class="section" id="section3">
     		<div class="row">
             <!-- Internetseite für Doppelklick http://www.heise.de/extras/socialshareprivacy/ -->
             <!-- <div class="col-md-4 col-sm-6 col-xs-12">
@@ -295,17 +332,8 @@
               </div>
             </div> -->
     		</div>
-    	</div>
-      <div class="section" id="section3">
-    		<div>
-    			<h1>Vielen Dank</h1>
-          <h2>tESTE bLUA</h2>
-          <p>
-            Besuchen sie und bald wieder!
-          </p>
-    		</div>
         <div id="lastType">
-          Copyrigth FSR3 Beuth-hochschule.de |
+          Copyright FSR3 Beuth Hochschule |
           <a href="#Impressum">Impressum</a>
         </div>
     	</div>
