@@ -46,6 +46,27 @@ header{
   padding: 0 10px;
   background-color: limegreen;
 }
+
+/*Tabelle der Sprechzeiten*/
+/* TODO: Tabelle der Sprechzeiten anpassen */
+/* TODO: Auf kleinen Bildschirmen keine feste Größe und auf den Größeren 60% */
+/* TODO: im Mobilen bereich kein Rahmen???? */
+.tabelle{
+
+}
+.mitteTabelle{
+
+}
+#startTabelle{
+
+}
+#mitteTabelle{
+
+}
+#endeTabelle{
+
+}
+/*Tabelle Ende*/
 /*.dropdown-menu{
   display: block;
 }*/
@@ -93,7 +114,8 @@ header{
 /*Startseite mit den Elementen*/
 .row{
   height: 93vh;
-  padding: 5px 40px 0px 40px;
+  padding: 5px 0px 0px 25px;
+  /* TODO: im Mobilen bereich aufpassen zum normalen Berich */
   margin-top: 50px;
   margin-bottom: 0;
   margin-left: 0;
