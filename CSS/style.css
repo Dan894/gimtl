@@ -3,7 +3,19 @@
 .section{
   text-align:center;
 }
-
+#fullpage{
+  /*height: calc(100% - 50px);*/
+  height: 60%;
+  padding-top: 50px;
+}
+div.fp-tableCell {
+  height: calc(100% - 50px);
+}
+.hide-for-medium{
+  width: 100%;
+  position: fixed;
+  z-index: 95;
+}
 /* Fixed header and footer.
 * --------------------------------------- */
 header{
@@ -27,6 +39,10 @@ header{
 .links{
   padding-left: 2px;
   /*display: none;*/
+}
+a, a:hover, a:active, a:focus{
+  color: white;
+  text-decoration: none;
 }
 #menu-items{
   display: block;
@@ -113,7 +129,7 @@ header{
 }
 /*Startseite mit den Elementen*/
 .row{
-  height: 93vh;
+  /*height: calc(100% - 50px);*/
   padding: 5px 0px 0px 25px;
   /* TODO: im Mobilen bereich aufpassen zum normalen Berich */
   margin-top: 50px;
@@ -155,6 +171,43 @@ h1, h3, h5, p{
   /*width: 100%;*/
   /*left: 150%;*/
 }
+#mobile-dropdown{
+  display: none;
+}
+#mobile-dropdown.active{
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: block;
+  float: left;
+  text-align: right;
+  font-size: 1.5em;
+  margin: 15px;
+  margin-left: 45px;
+  background-color: #00AFB2;
+  opacity: 0.9;
+  border: 0.5px white solid;
+  z-index: 96;
+}
+#mobile-dropdown.active>ul{
+  padding-left: 0;
+  /*width: calc(95vh - 50px);*/
+}
+#mobile-dropdown.active>ul>li{
+  list-style: none;
+  padding: 5px;
+  margin-right: 40px;
+  margin-left: 40px;
+  border-bottom: 1px solid white;
+}
+#mobile-dropdown.active>ul>li>a{
+  padding-bottom: 15px;
+  /*width: calc(100% - 100px);*/
+}
+#mobile-dropdown.active>ul>li.last{
+  padding-bottom: 5px;
+  border: none;
+}
 @media only screen and (min-width: 1000px) {
   #gruppenbild{
     width: 80%;
@@ -170,6 +223,7 @@ h1, h3, h5, p{
   .navbar-nav > li > a {
     padding-top: 5px;
     padding-bottom: 5px;
+    color: white;
   }
 }
 @media only screen and (min-width: 500px) {
@@ -182,8 +236,17 @@ h1, h3, h5, p{
   .legende{
     height: 100px;
   }
+  .hide-for-medium{
+    display: none;
+  }
 }
 @media only screen and (max-width: 500px) {
+  header{
+    display: none;
+  }
+  #menu{
+    top: 90px;
+  }
   .fp-controlArrow.fp-next{
     border-width: 38.5px 0 38.5px  15px;
     border-color: transparent rgba(0, 175, 178, 0.5) transparent;
@@ -219,6 +282,44 @@ h1, h3, h5, p{
   }
   .links{
     display: none;
+  }
+  #mobile-header{
+    margin: 10px;
+    display: flex;
+    justify-content:space-between;
+    width: calc(100% - 20px);
+  }
+  #logo-mobile{
+    height: 70px;
+  }
+  #mobile-header>a#dropdown-menu-mobile{
+    height: 50px;
+    width: 50px;
+    background-color: #00AFB2;
+    border-radius: 50%;
+    margin-top: 10px;
+    z-index: 97;
+    border: 1px solid white;
+  }
+  #mobile-header>a#dropdown-menu-mobile>span{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+  #navigation{
+    /*Ehemaliger mobiler Header gedacht*/
+    display: block;
+    height: 85vh;
+    /*width: 100%;*/
+    max-height: 85vh;
+    overflow: scroll;
+    margin: 25px;
+    float: right;
+    text-align: right;
+    font-size: 1.5em;
+    text-decoration: none;
   }
 }
 
