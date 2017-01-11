@@ -9,13 +9,14 @@
     <meta name="description" content="Internetpräsentation des FSR 3" />
   	<meta name="keywords"  content="FSR3,Fachschaftsrat3,Beuth-Hochschule" />
 
-    <link rel="icon" type="image/png" href="DATA/logo_start.jpg"> <!-- Logo für HTML Tab-->
+    <link rel="icon" type="image/png" href="DATA/logo_start.jpg" /> <!-- Logo für HTML Tab-->
     <link rel="stylesheet" type="text/css" href="CSS/jquery.fullPage.css" /> <!-- https://github.com/alvarotrigo/fullPage.js#fullpagejs -->
-    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css" />
   	<link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/header.css" />
   </head>
   <body>
-    <header>
+    <header class="show-on-medium">
       <!-- http://getbootstrap.com/javascript/ Link für Anleitung-->
       <!-- Dropdown mithilfe der Bootstrap JS Datei und dem einladen derselbigen -->
       <div class="collapse navbar-collapse bs-example-js-navbar-collapse">
@@ -91,7 +92,7 @@
       </div>
     </header>
     <!-- ab hier ist der Header nur noch auf dem Handy zu sehen -->
-    <div class="hide-for-medium container">
+    <div class="hide-for-medium">
       <div id="mobile-header">
         <a href="index.html">
           <img id="logo-mobile" src="DATA/logo_mobile_header.png" alt="Logo des FSR3" title="FSR3 Logo"/>
@@ -304,13 +305,13 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Bünyamin</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/portrait/Vorlage_Bünyamin.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Bünyamin.jpg" alt="Bünyamins Bild">
               </div>
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Sinan</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/portrait/Vorlage_Sinan.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Sinan.jpg" alt="Sinans Bild">
               </div>
             </div>
           </div>
@@ -323,7 +324,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12">
               <h5>Resan</h5>
               <div class="picture" >
-                <img class="einzelbilder" src="DATA/portrait/Vorlage_Resan.jpg" alt="Sonyas Bild">
+                <img class="einzelbilder" src="DATA/portrait/Vorlage_Resan.jpg" alt="Resans Bild">
               </div>
             </div>
             <!-- <div class="col-md-4 col-sm-6 col-xs-12">
@@ -336,31 +337,32 @@
     		</div>
       </div>
       <div class="section" id="section2">
-    		<div class="container" style="height:calc(100% - 50px);margin-top:50px;">
-          <h1 style="margin-top:5%;"><strong>Ausleih- und Sprechzeiten</strong></h1>
+    		<div class="container" id="sprechzeiten">
+          <h1 class="show-on-medium"><strong>Ausleih- und Sprechzeiten</strong></h1>
+          <h1 class="hide-for-medium"><strong>Sprechzeiten</strong></h1>
           <div class="row" style="height:45%; margin-top:10%;">
-      			<div class="col-md-offset-1 col-md-2 col-xs-12 tabelle" id="startTabelle" style="border: 4px solid black; border-right:2px solid; background-color:#E6E6E6;">
-      			  <h3 style="border-bottom:2px solid; padding-bottom: 10px;">Montag</h3>
+      			<div class="col-md-offset-1 col-md-2 col-xs-6 tabelle" id="startTabelle">
+      			  <h3>Montag</h3>
               <h5>11:40-12:20</h5>
               <h6>Ingrid (B)</h6>
               <!-- <h6>Ricardo (B)</h6> -->
       			</div>
-            <div class="col-md-2 col-xs-12 tabelle mitteTabelle" style="height:60%;border: 4px solid black; border-right:2px solid; border-left:2px solid; background-color:#D8D8D8;">
-      			  <h3 style="border-bottom:2px solid; padding-bottom: 10px;">Dienstag</h3>
+            <div class="col-md-2 col-xs-6 tabelle mitteTabelle">
+      			  <h3>Dienstag</h3>
               <h5>11:40-12:20</h5>
               <h6>Chanthuru (V)</h6>
               <h6>Haris (K)</h6>
       			</div>
-            <div class="col-md-2 col-xs-12 tabelle mitteTabelle" id="mitteTabelle" style="height:60%;border: 4px solid black; border-left:2px solid; background-color:#E6E6E6;">
-      			  <h3 style="border-bottom:2px solid; padding-bottom: 10px;">Mittwoch</h3>
+            <div class="col-md-2 col-xs-6 tabelle mitteTabelle" id="mitteTabelle">
+      			  <h3>Mittwoch</h3>
               <h5>11:40-12:20</h5>
               <h6>Daniel (G)</h6>
               <h6>Florian (G)</h6>
               <h6>Lucas (G)</h6>
               <h6>Peter (G)</h6>
       			</div>
-            <div class="col-md-2 col-xs-12 tabelle mitteTabelle" style="height:60%;background-color:#D8D8D8;">
-      			  <h3 style="border-bottom:2px solid; padding-bottom: 10px;">Donnerstag</h3>
+            <div class="col-md-2 col-xs-6 tabelle mitteTabelle">
+      			  <h3>Donnerstag</h3>
               <h5>11:40-12:20</h5>
               <h6>David (B)</h6>
               <h6>Resan (KHI)</h6>
@@ -368,8 +370,9 @@
               <h6>Funda (B)</h6>
               <h6>Renj (B)</h6>
       			</div>
-            <div class="col-md-2 col-xs-12 tabelle" id="endeTabelle" style="height:60%;background-color:#E6E6E6;">
-      			  <h3 style="border-bottom:2px solid; padding-bottom: 10px;">Freitag</h3>
+            <!-- col-xs-offset-3 -->
+            <div class="col-md-2 col-xs-6 tabelle" id="endeTabelle">
+      			  <h3>Freitag</h3>
               <h5>8:00-9:30</h5>
               <h6>Sonya (B)</h6>
               <h5>11:40-12:20</h5>
@@ -406,10 +409,10 @@
             </iframe>
           </div>
     		</div>
-        <div id="lastType">
+        <footer style="position: absolute;">
           Copyright FSR3 Beuth Hochschule |
-          <a href="#Impressum">Impressum</a>
-        </div>
+          <a href="Unterseiten/Impressum.html"><strong>Impressum</strong></a>
+        </footer>
     	</div>
     </div>
 
@@ -417,5 +420,6 @@
     <script type="text/javascript" src="JS/jquery.fullPage.js"></script>
     <script type="text/javascript" src="JS/bootstrap.js"></script>
   	<script type="text/javascript" src="JS/javascript.js"></script>
+    <script type="text/javascript" src="JS/dropdown.js"></script>
   </body>
 </html>

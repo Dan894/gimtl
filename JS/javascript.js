@@ -8,7 +8,4 @@ $(document).ready(function() {
   // $(function () {
   //   $('[data-toggle="popover"]').popover();
   // });
-  $('#dropdown-menu-mobile').click(function (){
-    $('#mobile-dropdown').toggleClass('active');
-  });
 });

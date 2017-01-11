@@ -1,18 +1,3 @@
-/* Centered texts in each section
-* --------------------------------------- */
-.section{
-  text-align:center;
-}
-#fullpage{
-  /*height: calc(100% - 50px);*/
-  height: 60%;
-  padding-top: 50px;
-}
-.hide-for-medium{
-  width: 100%;
-  position: fixed;
-  z-index: 95;
-}
 /* Fixed header and footer.
 * --------------------------------------- */
 header{
@@ -20,11 +5,33 @@ header{
   height: 50px;
   display:block;
   width: 100%;
-  background: #333;
   z-index:9;
   background-color: #00AFB2;
   padding: 5px;
   top:0px;
+}
+footer{
+  text-align: center;
+  bottom: 0px;
+  padding-bottom: 10px;
+  align-items: center;
+  background-color: #00AFB2;
+  width: 100%;
+  z-index: 80;
+}
+#unterseiten{
+  width: calc(100% - 20px);
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: scroll;
+}
+/*style="width: calc(100% - 16px); height: calc(100vh - 66px);margin:8px;margin-top:58px;"*/
+#mapid{
+  margin-top: 50px;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  z-index: 50;
 }
 #icon{
   height: 40px;
@@ -41,65 +48,6 @@ a, a:hover, a:active, a:focus{
   color: white;
   text-decoration: none;
 }
-#menu-items{
-  display: block;
-  flex-direction: row;
-  float: right;
-  margin-right: 10px;
-  height: 40px;
-  margin-top: 0;
-}
-#menu-items li{
-  display: flex;
-  flex-direction: row;
-  float: left;
-  /*justify-content: space-around;*/
-  height: 40px;
-  border: 1px black solid;
-  padding: 0 10px;
-  background-color: limegreen;
-}
-
-/*Tabelle der Sprechzeiten*/
-/* TODO: Tabelle der Sprechzeiten anpassen */
-/* TODO: Auf kleinen Bildschirmen keine feste Größe und auf den Größeren 60% */
-/* TODO: im Mobilen bereich kein Rahmen???? */
-#sprechzeiten{
-}
-#sprechzeiten>h1{
-  margin-top: 5%;
-  font-size: 5vh;
-}
-.tabelle{
-  border: 4px solid #00AFB2;
-  height: 60%;
-  /*border-width: thin;*/
-}
-.tabelle>h3{
-  font-size: 2em;
-  border-bottom:2px solid;
-  padding-bottom: 10px;
-}
-.mitteTabelle{
-  border-left-width: 2px;
-  border-right-width: 2px;
-  background-color:#D8D8D8;
-}
-#startTabelle{
-  border-right-width: 2px;
-  background-color:#E6E6E6;
-}
-#mitteTabelle{
-  background-color:#E6E6E6;
-}
-#endeTabelle{
-  border-left-width: 2px;
-  background-color:#E6E6E6;
-}
-/*Tabelle Ende*/
-/*.dropdown-menu{
-  display: block;
-}*/
 #ersteSimg{
   position: absolute;
   top: 0;
@@ -241,20 +189,18 @@ h1, h3, h5, p{
   }
 }
 @media only screen and (min-width: 500px) {
-  #gruppenbild{
-    width: 80%;
-  }
-  #picture{
-    height: 60%;
-  }
-  .legende{
-    height: 100px;
-  }
   .hide-for-medium{
     display: none;
   }
 }
 @media only screen and (max-width: 500px) {
+  #unterseiten{
+    margin-top: -30px;
+  }
+  #mapid{
+    margin-top: -5px;
+    height: calc(100vh - 115px);
+  }
   .container{
     height:calc(100% - 60px);
     margin-top:60px;
