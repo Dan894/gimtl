@@ -3,43 +3,65 @@
 .section{
   text-align:center;
 }
-
+.container{
+  height: calc(100vh - 50px);
+  max-height: calc(100vh - 50px);
+  margin-top: 50px;
+}
 /* *** 2.Section als Sprechzeitendesign *** */
 /*Tabelle der Sprechzeiten*/
 /* TODO: Tabelle der Sprechzeiten anpassen */
 /* TODO: Auf kleinen Bildschirmen keine feste Größe und auf den Größeren 60% */
 /* TODO: im Mobilen bereich kein Rahmen???? */
 #sprechzeiten{
+
 }
 #sprechzeiten>h1{
-  margin-top: 5%;
+  margin-top: 15px;
   font-size: 5vh;
 }
 .tabelle{
-  border: 4px solid #00AFB2;
-  height: 60%;
+  border: 2px solid #00AFB2;
+  /*height: 30vh;*/
   /*border-width: thin;*/
+  height: 60%;
 }
 .tabelle>h3{
-  font-size: 2em;
-  border-bottom:2px solid;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-bottom:1px solid;
   padding-bottom: 10px;
 }
+.tabelle>h5{
+  font-size: 1.2vw;
+}
+.tabelle>h6{
+  font-size: 1.1vw;
+}
 .mitteTabelle{
-  border-left-width: 2px;
-  border-right-width: 2px;
+  border-left-width: 1px;
+  border-right-width: 1px;
   background-color:#D8D8D8;
 }
 #startTabelle{
-  border-right-width: 2px;
+  border-right-width: 1px;
   background-color:#E6E6E6;
 }
 #mitteTabelle{
   background-color:#E6E6E6;
 }
 #endeTabelle{
-  border-left-width: 2px;
+  border-left-width: 1px;
   background-color:#E6E6E6;
+}
+.sprechzeiten-infos{
+  max-height: 20vh;
+  overflow:  auto;
+  text-align: left;
+  margin-top: 15px;
+}
+.sprechzeiten-infos>div>p{
+  margin-bottom: 0px;
 }
 /* *** Tabelle Ende *** */
 
@@ -86,16 +108,12 @@
 }
 /*Startseite mit den Elementen*/
 .row{
-  /*height: calc(100% - 50px);*/
   padding: 5px 25px 0px 25px;
   /* TODO: im Mobilen bereich aufpassen zum normalen Berich */
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
   overflow: hidden;
-}
-h1, h3, h5, p{
-  color: #00AFB2;
 }
 .intro > p{
   font-size: 300%;
@@ -118,56 +136,31 @@ h1, h3, h5, p{
 .einzelbilder{
   height: 100%;
   width: 100%;
+  max-width: 260px;
+  max-height: 260px;
+}
+.beschreibung-einzelbilder{
+  padding: 5px;
 }
 .bilder-erklaerung{
   position: absolute;
-  justify-content: space-around;
-  /*align-items: center;*/
+  justify-content: center;
   bottom: 0;
   width: 100vw;
   margin-bottom: 5vh;
 }
 .legende-vorstellung{
   width: 50vw;
-}
-#mobile-dropdown{
-  display: none;
-}
-#mobile-dropdown.active{
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  display: block;
-  float: left;
-  text-align: right;
-  font-size: 1.5em;
-  margin: 15px;
-  margin-left: 45px;
-  background-color: #00AFB2;
-  opacity: 0.9;
-  border: 0.5px white solid;
-  z-index: 96;
-}
-#mobile-dropdown.active>ul{
-  padding-left: 0;
-  /*width: calc(95vh - 50px);*/
-}
-#mobile-dropdown.active>ul>li{
-  list-style: none;
-  padding: 5px;
-  margin-right: 40px;
-  margin-left: 40px;
-  border-bottom: 1px solid white;
-}
-#mobile-dropdown.active>ul>li>a{
-  padding-bottom: 15px;
-  /*width: calc(100% - 100px);*/
-}
-#mobile-dropdown.active>ul>li.last{
-  padding-bottom: 5px;
-  border: none;
+  max-width: 500px;
+  max-height: 100px;
 }
 @media only screen and (min-width: 576px) {
+  .einzelbilder{
+    margin-bottom: 15px;
+  }
+  .beschreibung-einzelbilder{
+    display: inline-block;
+  }
   #gruppenbild{
     width: 80%;
   }
@@ -177,11 +170,14 @@ h1, h3, h5, p{
   /*.legende-vorstellung{
     height: 100px;
   }*/
+  .hide-tabelle{
+    display: none;
+  }
 }
 @media only screen and (max-width: 576px) {
   .container{
-    height:calc(100% - 60px);
-    margin-top:60px;
+    height:calc(100% - 90px);
+    margin-top:90px;
   }
   #menu{
     top: 90px;
@@ -197,12 +193,41 @@ h1, h3, h5, p{
   #picture{
     width: 80%;
   }
+  .picture{
+    display: flex;
+    justify-content: center;
+  }
   .einzelbilder{
     height: 35%;
     width: 35%;
+    margin-right: 5px;
+    /*float: left;*/
   }
   .legende-vorstellung{
-    /*display: none;*/
     width: 90%;
+  }
+  /*Tabellen design*/
+  .hide-tabelle{
+    margin-top: -15px;
+  }
+  .sprechzeiten-infos{
+    display: none;
+  }
+  .tabelle>h6{
+    /*display: none;*/
+    font-size: 2.5vw;
+  }
+  .tabelle{
+    height: auto;
+    max-height: 30%;
+  }
+  .tabelle>h3{
+    font-size: 5vw;
+    padding-bottom: 5px;
+    margin-top: 5px;
+  }
+  .tabelle>h5{
+    font-size: 4vw;
+
   }
 }

@@ -221,6 +221,9 @@
                 <h5>Florian (Logistik)</h5>
                 <div class="picture" >
                   <img class="einzelbilder"src="DATA/portrait/Vorlage_Florian.jpg" alt="kein Bild vorhanden">
+                  <div class="beschreibung-einzelbilder">
+                    Er ist so schön er ist so Toll er ist Florian der Vositz!
+                  </div>
                 </div>
               </div>
               <div class="col-sm-4 col-xs-12">
@@ -359,21 +362,21 @@
       <div class="section" id="section2">
     		<div class="container" id="sprechzeiten">
           <h1 class="show-on-medium"><strong>Ausleih- und Sprechzeiten</strong></h1>
-          <h1 class="hide-for-medium"><strong>Sprechzeiten</strong></h1>
-          <div class="row" style="height:45%; margin-top:10%;">
-      			<div class="col-md-offset-1 col-md-2 col-xs-6 tabelle" id="startTabelle">
+          <h1 class="hide-tabelle"><strong>Sprechzeiten</strong></h1>
+          <div class="row">
+      			<div class="col-sm-offset-1 col-sm-2 col-xs-6 tabelle" id="startTabelle">
       			  <h3>Montag</h3>
               <h5>11:40-12:20</h5>
               <h6>Ingrid (B)</h6>
               <!-- <h6>Ricardo (B)</h6> -->
       			</div>
-            <div class="col-md-2 col-xs-6 tabelle mitteTabelle">
+            <div class="col-sm-2 col-xs-6 tabelle mitteTabelle">
       			  <h3>Dienstag</h3>
               <h5>11:40-12:20</h5>
               <h6>Chanthuru (V)</h6>
               <h6>Haris (K)</h6>
       			</div>
-            <div class="col-md-2 col-xs-6 tabelle mitteTabelle" id="mitteTabelle">
+            <div class="col-sm-2 col-xs-6 tabelle mitteTabelle" id="mitteTabelle">
       			  <h3>Mittwoch</h3>
               <h5>11:40-12:20</h5>
               <h6>Daniel (G)</h6>
@@ -381,7 +384,7 @@
               <h6>Lucas (G)</h6>
               <h6>Peter (G)</h6>
       			</div>
-            <div class="col-md-2 col-xs-6 tabelle mitteTabelle">
+            <div class="col-sm-2 col-xs-6 tabelle mitteTabelle">
       			  <h3>Donnerstag</h3>
               <h5>11:40-12:20</h5>
               <h6>David (B)</h6>
@@ -391,7 +394,7 @@
               <h6>Renj (B)</h6>
       			</div>
             <!-- col-xs-offset-3 -->
-            <div class="col-md-2 col-xs-6 tabelle" id="endeTabelle">
+            <div class="col-sm-2 col-xs-6 tabelle" id="endeTabelle">
       			  <h3>Freitag</h3>
               <h5>8:00-9:30</h5>
               <h6>Sonya (B)</h6>
@@ -401,10 +404,8 @@
               <h6>Melisa (B)</h6>
       			</div>
       		</div>
-        <!-- </div>
-        <div class="container"> -->
-          <div class="row" style="height:20%">
-            <div class="col-md-offset-1 col-md-6" style="text-align: left;">
+          <div class="row sprechzeiten-infos">
+            <div class="col-sm-offset-1 col-sm-4">
               <h4><strong>Legende</strong></h4>
               <p>B = Bauingenieurswesen</p>
               <p>G = Geoinformation</p>
@@ -412,7 +413,7 @@
               <p>KHI = Konstruktiver Hoch- und Ingenieurbau</p>
               <p>V = Vermessung</p>
             </div>
-            <div class="col-md-4" style="text-align: left;">
+            <div class="col-sm-6">
               <h4><strong>Informationen</strong></h4>
               <p>Es können gegebenfalls Abweichungen entstehen.</p>
               <p>Dies bitten wir zu entschuldigen.</p>
@@ -423,11 +424,13 @@
       </div>
     	<div class="section" id="section3">
         <!-- TODO: Bildergalerie siehe https://www.datalyze-solutions.com/projekte/ und http://dimsemenov.com/plugins/magnific-popup/ -->
-    		<div class="row">
-          <div class="col-md-6 col-sm-6 col-xs-12" style="height:100%;overflow:hidden;">
-            <iframe src="https://feed.mikle.com/widget/v2/?widget_parameter=%7B%22sources%22%3A%5B%7B%22source%22%3A%22https%3A%2F%2Fwww.studentenwerk-berlin.de%2Fspeiseplan%2Frss%2Fbeuth%2Ftag%2Fkurz%2F8%22%2C%22type%22%3A%22RSS%22%7D%5D%2C%22name%22%3A%22%22%2C%22width%22%3A0%2C%22height%22%3A%22500%22%2C%22height_by_article%22%3A0%2C%22target%22%3A%22_top%22%2C%22font%22%3A%22Arial%2C%20Helvetica%2C%20sans-serif%22%2C%22title_font_size%22%3A%2216%22%2C%22item_title_font_size%22%3A%2216%22%2C%22item_description_font_size%22%3A%2212%22%2C%22border%22%3A%22off%22%2C%22css_url%22%3A%22%22%2C%22responsive%22%3A%22on%22%2C%22text_direction%22%3A%22left%22%2C%22text_alignment%22%3A%22left%22%2C%22corner%22%3A%22square%22%2C%22scroll%22%3A%22on%22%2C%22auto_scroll%22%3A%22off%22%2C%22auto_scroll_direction%22%3A%22down%22%2C%22auto_scroll_step_speed%22%3A%224%22%2C%22auto_scroll_mc_speed%22%3A%2220%22%2C%22sort%22%3A%22new%22%2C%22title%22%3A%22on%22%2C%22title_sentence%22%3A%22%22%2C%22title_link%22%3A%22%22%2C%22title_bgcolor%22%3A%22%23ffffff%22%2C%22title_color%22%3A%22%23505659%22%2C%22title_bgimage%22%3A%22%22%2C%22item_bgcolor%22%3A%22%23ffffff%22%2C%22item_bgimage%22%3A%22%22%2C%22item_title_length%22%3A%2255%22%2C%22item_title_color%22%3A%22%232e7ec8%22%2C%22item_border_bottom%22%3A%22off%22%2C%22item_description%22%3A%22both%22%2C%22item_link%22%3A%22off%22%2C%22item_description_length%22%3A%22100%22%2C%22item_description_color%22%3A%22%23505659%22%2C%22item_date%22%3A%22off%22%2C%22item_date_format%22%3A%22%25e.%25m.%25Y%20%25k%3A%25M%22%2C%22item_date_timezone%22%3A%22%22%2C%22item_description_style%22%3A%22html%22%2C%22item_thumbnail%22%3A%22crop%22%2C%22item_thumbnail_selection%22%3A%22auto%22%2C%22article_num%22%3A%2215%22%2C%22item_player%22%3A%22off%22%2C%22keyword_inc%22%3A%22%22%2C%22keyword_exc%22%3A%22%22%7D" style="height:505px;width:100%;">
-            </iframe>
-          </div>
+    		<div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <iframe src="https://feed.mikle.com/widget/v2/?widget_parameter=%7B%22sources%22%3A%5B%7B%22source%22%3A%22https%3A%2F%2Fwww.studentenwerk-berlin.de%2Fspeiseplan%2Frss%2Fbeuth%2Ftag%2Fkurz%2F8%22%2C%22type%22%3A%22RSS%22%7D%5D%2C%22name%22%3A%22%22%2C%22width%22%3A0%2C%22height%22%3A%22500%22%2C%22height_by_article%22%3A0%2C%22target%22%3A%22_top%22%2C%22font%22%3A%22Arial%2C%20Helvetica%2C%20sans-serif%22%2C%22title_font_size%22%3A%2216%22%2C%22item_title_font_size%22%3A%2216%22%2C%22item_description_font_size%22%3A%2212%22%2C%22border%22%3A%22off%22%2C%22css_url%22%3A%22%22%2C%22responsive%22%3A%22on%22%2C%22text_direction%22%3A%22left%22%2C%22text_alignment%22%3A%22left%22%2C%22corner%22%3A%22square%22%2C%22scroll%22%3A%22on%22%2C%22auto_scroll%22%3A%22off%22%2C%22auto_scroll_direction%22%3A%22down%22%2C%22auto_scroll_step_speed%22%3A%224%22%2C%22auto_scroll_mc_speed%22%3A%2220%22%2C%22sort%22%3A%22new%22%2C%22title%22%3A%22on%22%2C%22title_sentence%22%3A%22%22%2C%22title_link%22%3A%22%22%2C%22title_bgcolor%22%3A%22%23ffffff%22%2C%22title_color%22%3A%22%23505659%22%2C%22title_bgimage%22%3A%22%22%2C%22item_bgcolor%22%3A%22%23ffffff%22%2C%22item_bgimage%22%3A%22%22%2C%22item_title_length%22%3A%2255%22%2C%22item_title_color%22%3A%22%232e7ec8%22%2C%22item_border_bottom%22%3A%22off%22%2C%22item_description%22%3A%22both%22%2C%22item_link%22%3A%22off%22%2C%22item_description_length%22%3A%22100%22%2C%22item_description_color%22%3A%22%23505659%22%2C%22item_date%22%3A%22off%22%2C%22item_date_format%22%3A%22%25e.%25m.%25Y%20%25k%3A%25M%22%2C%22item_date_timezone%22%3A%22%22%2C%22item_description_style%22%3A%22html%22%2C%22item_thumbnail%22%3A%22crop%22%2C%22item_thumbnail_selection%22%3A%22auto%22%2C%22article_num%22%3A%2215%22%2C%22item_player%22%3A%22off%22%2C%22keyword_inc%22%3A%22%22%2C%22keyword_exc%22%3A%22%22%7D" style="height:70vh;width:100%;">
+              </iframe>
+            </div>
+      		</div>
     		</div>
         <footer style="position: absolute;">
           Copyright FSR3 Beuth Hochschule |
