@@ -3,63 +3,8 @@
 .section{
   text-align:center;
 }
-#fullpage{
-  /*height: calc(100% - 50px);*/
-  height: 60%;
-  padding-top: 50px;
-}
-.hide-for-medium{
-  width: 100%;
-  position: fixed;
-  z-index: 95;
-}
-/* Fixed header and footer.
-* --------------------------------------- */
-header{
-  position:fixed;
-  height: 50px;
-  display:block;
-  width: 100%;
-  background: #333;
-  z-index:9;
-  background-color: #00AFB2;
-  padding: 5px;
-  top:0px;
-}
-#icon{
-  height: 40px;
-}
-.icons{
-  height: 30px;
-  /*margin-top: 0px;*/
-}
-.links{
-  padding-left: 2px;
-  /*display: none;*/
-}
-a, a:hover, a:active, a:focus{
-  color: white;
-  text-decoration: none;
-}
-#menu-items{
-  display: block;
-  flex-direction: row;
-  float: right;
-  margin-right: 10px;
-  height: 40px;
-  margin-top: 0;
-}
-#menu-items li{
-  display: flex;
-  flex-direction: row;
-  float: left;
-  /*justify-content: space-around;*/
-  height: 40px;
-  border: 1px black solid;
-  padding: 0 10px;
-  background-color: limegreen;
-}
 
+/* *** 2.Section als Sprechzeitendesign *** */
 /*Tabelle der Sprechzeiten*/
 /* TODO: Tabelle der Sprechzeiten anpassen */
 /* TODO: Auf kleinen Bildschirmen keine feste Größe und auf den Größeren 60% */
@@ -96,10 +41,8 @@ a, a:hover, a:active, a:focus{
   border-left-width: 2px;
   background-color:#E6E6E6;
 }
-/*Tabelle Ende*/
-/*.dropdown-menu{
-  display: block;
-}*/
+/* *** Tabelle Ende *** */
+
 #ersteSimg{
   position: absolute;
   top: 0;
@@ -144,9 +87,8 @@ a, a:hover, a:active, a:focus{
 /*Startseite mit den Elementen*/
 .row{
   /*height: calc(100% - 50px);*/
-  padding: 5px 0px 0px 25px;
+  padding: 5px 25px 0px 25px;
   /* TODO: im Mobilen bereich aufpassen zum normalen Berich */
-  margin-top: 50px;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
@@ -156,14 +98,13 @@ h1, h3, h5, p{
   color: #00AFB2;
 }
 .intro > p{
-  /*padding: 0 10%;*/
   font-size: 300%;
   font-weight: bold;
 }
 .intro > img{
-   width:30%;
-   height:30%;
-   margin-top: -0%;
+   height:20%;
+   width: 20%;
+   margin-top: 0;
 }
 #gruppenbild{
   margin-top: calc(50px + 5%);
@@ -175,15 +116,19 @@ h1, h3, h5, p{
   margin: 5%;
 }
 .einzelbilder{
-  height: 20em;
-  width: 20em;
+  height: 100%;
+  width: 100%;
 }
-.legende{
-  /*position: absolute;*/
-  /*bottom: 0;*/
-  margin-bottom: 30px;
-  /*width: 100%;*/
-  /*left: 150%;*/
+.bilder-erklaerung{
+  position: absolute;
+  justify-content: space-around;
+  /*align-items: center;*/
+  bottom: 0;
+  width: 100vw;
+  margin-bottom: 5vh;
+}
+.legende-vorstellung{
+  width: 50vw;
 }
 #mobile-dropdown{
   display: none;
@@ -222,45 +167,21 @@ h1, h3, h5, p{
   padding-bottom: 5px;
   border: none;
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 576px) {
   #gruppenbild{
     width: 80%;
   }
   #picture{
     height: 60%;
   }
-  .legende{
+  /*.legende-vorstellung{
     height: 100px;
-  }
+  }*/
 }
-@media only screen and (min-width: 768px){
-  .navbar-nav > li > a {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    color: white;
-  }
-}
-@media only screen and (min-width: 500px) {
-  #gruppenbild{
-    width: 80%;
-  }
-  #picture{
-    height: 60%;
-  }
-  .legende{
-    height: 100px;
-  }
-  .hide-for-medium{
-    display: none;
-  }
-}
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 576px) {
   .container{
     height:calc(100% - 60px);
     margin-top:60px;
-  }
-  .show-on-medium{
-    display: none;
   }
   #menu{
     top: 90px;
@@ -277,67 +198,11 @@ h1, h3, h5, p{
     width: 80%;
   }
   .einzelbilder{
-    height: 40%;
-    width: 40%;
+    height: 35%;
+    width: 35%;
   }
-  h1{
-    /*font-size: 150%;*/
-    margin-bottom: 0;
-    padding-top: 5px;
-  }
-  h3{
-    /*font-size: 100%;*/
-    margin-bottom: 0;
-  }
-  h5{
-    /*font-size: 75%;*/
-    margin-top: 10px;
-    margin-bottom: 5px;
-  }
-  .legende{
+  .legende-vorstellung{
+    /*display: none;*/
     width: 90%;
-    /*height: 5%;*/
-  }
-  .links{
-    display: none;
-  }
-  #mobile-header{
-    margin: 10px;
-    display: flex;
-    justify-content:space-between;
-    width: calc(100% - 20px);
-  }
-  #logo-mobile{
-    height: 70px;
-  }
-  #mobile-header>a#dropdown-menu-mobile{
-    height: 50px;
-    width: 50px;
-    background-color: #00AFB2;
-    border-radius: 50%;
-    margin-top: 10px;
-    margin-right: 10px;
-    z-index: 97;
-    border: 1px solid white;
-  }
-  #mobile-header>a#dropdown-menu-mobile>span{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-  }
-  #navigation{
-    /*Ehemaliger mobiler Header gedacht*/
-    display: block;
-    height: 85vh;
-    /*width: 100%;*/
-    max-height: 85vh;
-    overflow: scroll;
-    margin: 25px;
-    float: right;
-    text-align: right;
-    font-size: 1.5em;
-    text-decoration: none;
   }
 }
