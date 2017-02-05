@@ -5,7 +5,7 @@
 }
 .container{
   height: calc(100vh - 50px);
-  max-height: calc(100vh - 50px);
+  max-height: calc(100vh - 120px);
   margin-top: 50px;
 }
 /* *** 2.Section als Sprechzeitendesign *** */
@@ -13,18 +13,18 @@
 /* TODO: Tabelle der Sprechzeiten anpassen */
 /* TODO: Auf kleinen Bildschirmen keine feste Größe und auf den Größeren 60% */
 /* TODO: im Mobilen bereich kein Rahmen???? */
-#sprechzeiten{
-
-}
 #sprechzeiten>h1{
   margin-top: 15px;
   font-size: 5vh;
+}
+.sprech{
+  height: 35%;
 }
 .tabelle{
   border: 2px solid #00AFB2;
   /*height: 30vh;*/
   /*border-width: thin;*/
-  height: 60%;
+  height: 100%;
 }
 .tabelle>h3{
   font-size: 1.5vw;
@@ -38,27 +38,11 @@
 .tabelle>h6{
   font-size: 1.1vw;
 }
-.mitteTabelle{
-  border-left-width: 1px;
-  border-right-width: 1px;
-  background-color:#D8D8D8;
-}
-#startTabelle{
-  border-right-width: 1px;
-  background-color:#E6E6E6;
-}
-#mitteTabelle{
-  background-color:#E6E6E6;
-}
-#endeTabelle{
-  border-left-width: 1px;
-  background-color:#E6E6E6;
-}
 .sprechzeiten-infos{
-  max-height: 20vh;
-  overflow:  auto;
+  max-height: 25vh;
+  overflow: scroll;;
   text-align: left;
-  margin-top: 15px;
+  margin-top: 15%;
 }
 .sprechzeiten-infos>div>p{
   margin-bottom: 0px;
@@ -154,7 +138,12 @@
   max-width: 500px;
   max-height: 100px;
 }
-@media only screen and (min-width: 576px) {
+#speiseplan{
+  margin: 5px;
+  height: calc(100% - 40px);
+  overflow-y: scroll;
+}
+@media only screen and (min-width: 771px) {
   .einzelbilder{
     margin-bottom: 15px;
   }
@@ -165,18 +154,37 @@
     width: 80%;
   }
   #picture{
-    height: 60%;
+    max-width: 80vw;
+    max-height: 50vh;
   }
-  /*.legende-vorstellung{
-    height: 100px;
-  }*/
   .hide-tabelle{
     display: none;
   }
+  .mitteTabelle{
+    border-left-width: 1px;
+    border-right-width: 1px;
+    background-color:#D8D8D8;
+  }
+  #startTabelle{
+    border-right-width: 1px;
+    background-color:#E6E6E6;
+  }
+  #mitteTabelle{
+    background-color:#E6E6E6;
+  }
+  #endeTabelle{
+    border-left-width: 1px;
+    background-color:#E6E6E6;
+  }
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 900px){
+  .bilder-erklaerung{
+    display: none;
+  }
+}
+@media only screen and (max-width: 770px) {
   .container{
-    height:calc(100% - 90px);
+    height:calc(100% - 120px);
     margin-top:90px;
   }
   #menu{
@@ -190,6 +198,21 @@
     border-width: 38.5px 15px 38.5px 0;
     border-color: transparent rgba(0, 175, 178, 0.5) transparent;
   }
+  h1{
+    font-size: 5vh;
+    margin-top: -5px;
+    margin-bottom: 0;
+    padding-top: 0px;
+  }
+  h3{
+    font-size: 4vh;
+    margin-bottom: 0;
+  }
+  h5{
+    font-size: 3vh;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
   #picture{
     width: 80%;
   }
@@ -198,10 +221,9 @@
     justify-content: center;
   }
   .einzelbilder{
-    height: 35%;
-    width: 35%;
+    height: 17vh;
+    width: 17vh;
     margin-right: 5px;
-    /*float: left;*/
   }
   .legende-vorstellung{
     width: 90%;
@@ -213,13 +235,29 @@
   .sprechzeiten-infos{
     display: none;
   }
+  .sprech{
+    height: 100%;
+  }
   .tabelle>h6{
-    /*display: none;*/
-    font-size: 2.5vw;
+    display: none;
+    font-size: 2.5vh;
   }
   .tabelle{
     height: auto;
     max-height: 30%;
+  }
+  .mitteTabelle{
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    background-color:#D8D8D8;
+  }
+  #startTabelle{
+    border-bottom-width: 1px;
+    background-color:#E6E6E6;
+  }
+  #endeTabelle{
+    border-top-width: 1px;
+    background-color:#E6E6E6;
   }
   .tabelle>h3{
     font-size: 5vw;
@@ -228,6 +266,10 @@
   }
   .tabelle>h5{
     font-size: 4vw;
-
+  }
+  /*IFRAME*/
+  #speiseplan{
+    margin: 0px 10px 0px 10px;
+    height: calc(100% - 30px);
   }
 }
