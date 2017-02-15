@@ -141,7 +141,7 @@
 #speiseplan{
   margin: 5px;
   height: calc(100% - 40px);
-  overflow-y: scroll;
+  overflow: scroll;
 }
 @media only screen and (min-width: 771px) {
   .einzelbilder{
